@@ -1,16 +1,11 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 )
 
 func main() {
+	fmt.Println("Hello, CometBFT")
 
-	writer := bufio.NewWriter(os.Stdout)
-
-	defer writer.Flush()
-
-	_, _ = fmt.Fprintln(writer, "Hello World")
+	_ = NewKVStoreApplication()
 }
